@@ -3,12 +3,13 @@ public class Test1 {
 	public String goatLatinWord(String s, int ab) {
 		StringBuffer str = new StringBuffer();
 		char temp;
-		if(s == " ") return " ";
+		
 		String S = s.toLowerCase();
+		System.out.println(S);
 		int n = ab;
 		if (S.charAt(0) == 'a' || S.charAt(0) == 'e' || S.charAt(0) == 'i' || S.charAt(0) == 'o'
 				|| S.charAt(0) == 'u') {
-			str.append(s);
+			str.append(S);
 			str.append("ma");
 			for (int i = 0; i < n; i++) {
 				str.append("a");
@@ -29,7 +30,11 @@ public class Test1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Test1 n = new Test1();
-		String s = "Hello i am neha";
+		String s = "";
+		if(s == "") {
+			System.out.println("empty string");
+			System.exit(0);
+		   }
 		StringBuffer str = new StringBuffer();
 		String temp;
 		String[] arr = s.split(" ");
@@ -37,8 +42,8 @@ public class Test1 {
 		for (String wo : arr) {
 			temp = n.goatLatinWord(wo, count);
 			count++;
-			str.append(temp);
-			str.append(" ");
+			str.append(temp+" ");
+			
 		}
 
 		System.out.println(str.toString());
