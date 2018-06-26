@@ -3,7 +3,8 @@ public class Test1 {
 	public String goatLatinWord(String s, int ab) {
 		StringBuffer str = new StringBuffer();
 		char temp;
-		String S = s;
+		if(s == " ") return " ";
+		String S = s.toLowerCase();
 		int n = ab;
 		if (S.charAt(0) == 'a' || S.charAt(0) == 'e' || S.charAt(0) == 'i' || S.charAt(0) == 'o'
 				|| S.charAt(0) == 'u') {
@@ -13,10 +14,10 @@ public class Test1 {
 				str.append("a");
 			}
 		} else {
-			temp = S.charAt(0);
-			str.append(S);
-			str.deleteCharAt(0);
-			str.append(temp);
+			//temp = S.charAt(0);
+			str.append(S.substring(1,S.length()));
+			//str.deleteCharAt(0);
+			str.append(S.charAt(0));
 			for (int i = 0; i < n; i++) {
 				str.append("a");
 			}
@@ -32,7 +33,7 @@ public class Test1 {
 		StringBuffer str = new StringBuffer();
 		String temp;
 		String[] arr = s.split(" ");
-		int count = 1;
+		int count = 0;
 		for (String wo : arr) {
 			temp = n.goatLatinWord(wo, count);
 			count++;
