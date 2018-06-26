@@ -30,7 +30,10 @@ public class Test1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Test1 n = new Test1();
-		String s = "";
+		String st = "               ";
+		
+		String s = st.replaceAll("\\s+"," ");
+		System.out.println(s);
 		if(s == "") {
 			System.out.println("empty string");
 			System.exit(0);
