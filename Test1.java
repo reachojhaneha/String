@@ -34,7 +34,7 @@ public class Test1 {
 		
 		String s = st.replaceAll("\\s+"," ");
 		System.out.println(s);
-		if(s == "") {
+		if(s == " ") {
 			System.out.println("empty string");
 			System.exit(0);
 		   }
