@@ -1,26 +1,41 @@
 
 public class linkedlist {
-	
 	Node head;
-	public class Node{
-		int data;
-		Node next;
-		
-		Node(int d){
-			data = d;
+	
+	public void pprintll(Node head) {
+		Node n = head;
+		while(n!=null) {
+			System.out.println(n.data);
+			n = n.next;
 		}
 	}
-	public static void main(String[] args) {
-		linkedlist llist = new linkedlist();
-		Node first = new Node(1);
-		llist.head = first;
-		Node second = new Node(2); 
-		Node third = new Node(3);
-		llist.head.next = second;
-		second.next = third;
-		third.next = null;
-		System.out.println(llist.head);
+	
+	public void insertbegin(Node head, int data) {
+		linkedlist ll=new linkedlist();
+		Node newnode = new Node(data);
+		//Node n = head;
+		newnode.next =  head;
+		head = newnode;
+		ll.pprintll(head);
 		
 	}
+	
+	public static void main(String[] args) {
+		linkedlist ll=new linkedlist();
+		Node one = new Node(1);
+		Node two = new Node(2);
+		Node three = new Node(3);
+		//ll.head = one;
+		ll.head = one;
+		one.next = two;
+		two.next = three;
+		three.next = null;
+		//ll.pprintll(ll.head);
+		ll.insertbegin(ll.head,4);
+		
+	}
+		
+		
+	
 
 }
