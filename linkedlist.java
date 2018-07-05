@@ -11,12 +11,12 @@ public class linkedlist {
 	}
 	
 	public void insertbegin(Node head, int data) {
-		linkedlist ll=new linkedlist();
+		linkedlist llis = new linkedlist();
 		Node newnode = new Node(data);
 		//Node n = head;
 		newnode.next =  head;
 		head = newnode;
-		ll.pprintll(head);
+		llis.pprintll(head);
 		
 	}
 	
